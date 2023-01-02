@@ -1,0 +1,50 @@
+<ion-content noscroll>
+  <div *ngIf="!activado" style="width: 100%; height: 100%;">
+    <ion-grid style="height: 10%; display: flex; flex-flow: column;">
+      <ion-row style="flex-grow: 1;">
+        <ion-col>
+          <ion-button class="botones" expand="block" color="warning"type="submit" (click)="logOut()">
+            <ion-text color="light"> Cerrar Sesión </ion-text>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  
+    <ion-grid style="height: 90%; display: flex; flex-flow: column;">
+      <ion-row style="flex-grow: 1;">
+        <ion-col style="height: 90%;">
+          <span class="test"><ion-icon name="lock-open" class="span2" color="light" *ngIf="!activado" (click)="activarAlarma()"></ion-icon></span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="activado" style="width: 100%; height: 100%;">
+
+    <ion-grid style="height: 90%; display: flex; flex-flow: column;">
+      <ion-row style="flex-grow: 1; height: 90%; width: 100%;">
+        <ion-col style="height: 90%; width: 100%;">
+          <ion-icon name="lock-closed" class="span" color="light" ></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-row style="flex-grow: 1; height: 10%; width: 100%;">
+        <ion-col style="height: 10%; width: 100%;">
+          <form (ngSubmit)="apagarAlarma()" #f="ngForm">
+            <ion-item class="items">
+              <ion-label position="floating">
+                  <ion-text color="light" style="font-family: 'Gill Sans'; font-size: large;">Contraseña</ion-text>
+              </ion-label>
+              <ion-input style="color: black" [(ngModel)]="clave" name="clave" type="password" required color="dark"></ion-input>
+          </ion-item>
+          <ion-button class="botones" expand="block" fill="solid" type="submit" color="warning">
+            <ion-text color="light" style="font-family: 'Gill Sans'; "> Desactivar alarma </ion-text>
+          </ion-button>
+          </form>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <ion-spinner *ngIf="apretado" name="crescent" style="display: block; position: inherit; margin:auto;width: 3cm; height: 4cm; margin-top: 1.5rem; z-index: 101;" color="tertiary"></ion-spinner>
+
+</ion-content>

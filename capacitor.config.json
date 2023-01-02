@@ -1,0 +1,12 @@
+{
+	"appId": "io.ionic.starter4",
+	"appName": "Alarma Antirrobo",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"plugins": {
+		"SplashScreen": {
+		  "launchAutoHide": false,
+		  "showSpinner": false
+		}
+	}
+}

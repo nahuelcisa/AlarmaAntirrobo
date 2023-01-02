@@ -1,0 +1,63 @@
+.container {
+    margin-top: 3rem;
+}
+
+.iontittle{
+    font-family: 'Courier New';
+    font-style: italic;
+    font-size: 1.8rem;
+    background-color: rgba(254, 255, 248, 0.13);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.logo{
+    width: 13rem;
+    height: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 2rem;
+}
+
+ion-content {
+    //--background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../../assets/images/bg-auth.jpg");
+    --background: #FF9A8B;
+    --background: linear-gradient(90deg, #fc6851 0%, #fa4569 55%, #fd4a6b 100%);
+
+
+}
+
+.botones {
+    width: 80%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5rem;
+}
+
+.items {
+    margin-top: 0.5rem;
+    --background: #00000000;
+    border-style: inset;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.ionButton{
+    width: 100%;
+    font-family: 'Courier New';
+    font-size: large;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.group{
+    margin-top: 2rem;
+    width: 100%;
+}
+

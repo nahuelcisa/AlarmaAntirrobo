@@ -1,0 +1,47 @@
+<ion-content no-scroll>
+
+  <h1 class="iontittle"><p>Alarma Antirrobo</p></h1>
+
+  <div class="container"> 
+          <form (ngSubmit)="iniciarSesion()" #f="ngForm">
+              <ion-item class="items">
+                  <ion-label position="floating">
+                      <ion-text color="dark" style="font-family: 'Courier New';">Correo</ion-text>
+                  </ion-label>
+                  <ion-input style="--color: white" [(ngModel)]="email" name="email" type="text" required></ion-input>
+              </ion-item>
+    
+              <ion-item class="items">
+                <ion-label position="floating">
+                  <ion-text color="dark" style="font-family: 'Courier New';">Contraseña</ion-text>
+                  </ion-label>
+                  <ion-input style="--color: white" [(ngModel)]="clave" name="clave" type="password" required></ion-input>
+              </ion-item>
+              <ion-button class="botones" expand="block" fill="outline" color="secondary" type="submit">
+                  <ion-text color="dark" style="font-family: 'Courier New';"> Iniciar sesión </ion-text>
+              </ion-button>
+          </form>
+          <ion-spinner *ngIf="apretado" name="dots" style="display: block; margin:auto;width: 2cm; height: 2cm;"></ion-spinner>
+
+          <div class="containerButtons">
+              <ion-grid>
+                <ion-row size="12">
+                    <mat-button-toggle-group class="group">
+                      <mat-button-toggle class="ionButton" (click)="inicioRapido(1)">
+                      Admin              
+                      </mat-button-toggle>
+                      <mat-button-toggle class="ionButton" (click)="inicioRapido(2)">
+                      Usuario
+                      </mat-button-toggle>
+                      <mat-button-toggle class="ionButton" (click)="inicioRapido(3)">
+                      Invitado
+                      </mat-button-toggle>
+                    </mat-button-toggle-group>
+                </ion-row>
+              </ion-grid>     
+
+        </div>
+
+        <img src="../../../assets/images/iconopng.png" class="logo">
+  </div>
+</ion-content>
